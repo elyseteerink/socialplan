@@ -61,6 +61,8 @@ class Module_SocialPlan extends Module {
 		// {
 		// 	return TRUE;
 		// }
+
+		return true;
 	}
 
 	public function uninstall()
@@ -70,6 +72,8 @@ class Module_SocialPlan extends Module {
 		// {
 		// 	return TRUE;
 		// }
+
+		return true;
 	}
 
 

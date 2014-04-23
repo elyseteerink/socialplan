@@ -7,7 +7,7 @@
  * @package 	PyroCMS
  * @subpackage 	Sample Module
  */
-class Plugin_Sample extends Plugin
+class Plugin_Socialplan extends Plugin
 {
 	/**
 	 * Item List
@@ -19,16 +19,16 @@ class Plugin_Sample extends Plugin
 	 *
 	 * @return	array
 	 */
-	function items()
-	{
-		$limit = $this->attribute('limit');
-		$order = $this->attribute('order');
+	// function items()
+	// {
+	// 	$limit = $this->attribute('limit');
+	// 	$order = $this->attribute('order');
 		
-		return $this->db->order_by('name', $order)
-						->limit($limit)
-						->get('sample_items')
-						->result_array();
-	}
+	// 	return $this->db->order_by('name', $order)
+	// 					->limit($limit)
+	// 					->get('sample_items')
+	// 					->result_array();
+	// }
 }
 
 /* End of file plugin.php */

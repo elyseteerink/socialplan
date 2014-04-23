@@ -7,7 +7,7 @@
  * @package 	PyroCMS
  * @subpackage 	Sample Module
  */
-class Sample_m extends MY_Model {
+class Socialplan_m extends MY_Model {
 
 	public function __construct()
 	{		

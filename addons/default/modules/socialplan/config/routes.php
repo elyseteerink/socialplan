@@ -21,4 +21,4 @@
 */
 
 // front-end
-//$route['sample(/:num)?']			= 'sample/index$1';
+$route['socialplan(/:num)?']			= 'socialplan/index$1';
