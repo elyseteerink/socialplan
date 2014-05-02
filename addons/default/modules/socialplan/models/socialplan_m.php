@@ -19,7 +19,14 @@ class Socialplan_m extends MY_Model {
 		 * I named it "sample" then we just set the name here.
 		 */
 		$this->_table = 'sample';
+                
+                $this->load->driver('Streams');
 	}
+        
+        public function index()
+        {
+            
+        }
 	
 	//create a new item
 	public function create($input)

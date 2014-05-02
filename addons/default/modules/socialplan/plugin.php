@@ -1,12 +1,5 @@
 <?php if (!defined('BASEPATH')) exit('No direct script access allowed');
-/**
- * This is a sample module for PyroCMS
- *
- * @author 		Jerel Unruh - PyroCMS Dev Team
- * @website		http://unruhdesigns.com
- * @package 	PyroCMS
- * @subpackage 	Sample Module
- */
+
 class Plugin_Socialplan extends Plugin
 {
 	/**
@@ -29,6 +22,11 @@ class Plugin_Socialplan extends Plugin
 	// 					->get('sample_items')
 	// 					->result_array();
 	// }
+    
+       function get_socialplan_menu()
+       {
+           
+       }
 }
 
 /* End of file plugin.php */

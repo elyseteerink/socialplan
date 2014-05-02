@@ -7,7 +7,7 @@
  * @package 	PyroCMS
  * @subpackage 	Sample Module
  */
-class Socialplan extends Public_Controller
+class Mysocialplan extends Public_Controller
 {
 	public function __construct()
 	{
@@ -27,6 +27,8 @@ class Socialplan extends Public_Controller
 	 */
 	public function index($offset = 0)
 	{
+            $this->socialplan_m->index();
+            
 		// // set the pagination limit
 		// $limit = 5;
 		

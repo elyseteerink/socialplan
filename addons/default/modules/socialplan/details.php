@@ -1,17 +1,19 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
-class Module_SocialPlan extends Module {
+class Module_MySocialPlan extends Module {
 
-	public $version = '1.0';
+	public $version = '0.1';
 
 	public function info()
 	{
 		return array(
 			'name' => array(
-				'en' => 'Social Plan'
+				'en' => 'My Social Plan',
+                                'nl' => 'Mijn Socialplan'
 			),
 			'description' => array(
-				'en' => 'Social Plan'
+				'en' => 'My Social Plan',
+                                'nl' => 'Mijn Socialplan'
 			),
 			'frontend' => TRUE,
 			'backend' => FALSE
@@ -20,6 +22,13 @@ class Module_SocialPlan extends Module {
 
 	public function install()
 	{
+            $this->load->driver('Streams');
+            
+            $stream_name = "socialplan_stream";
+            $stream_slug = "socialplan_slug";
+            $namespace = "socialplan_namespace";
+            $this->streams->streams->add_stream($stream_name, $stream_slug, $namespace);
+            
 		// $this->dbforge->drop_table('sample');
 		// $this->db->delete('settings', array('module' => 'sample'));
 
@@ -67,6 +76,12 @@ class Module_SocialPlan extends Module {
 
 	public function uninstall()
 	{
+            $this->load->driver('Streams');
+            
+            $stream_slug = "socialplan_slug";
+            $namespace = "socialplan_namespace";
+            $this->streams->streams->delete_stream($stream_slug, $namespace);
+            
 		// $this->dbforge->drop_table('sample');
 		// $this->db->delete('settings', array('module' => 'sample'));
 		// {
